@@ -257,10 +257,7 @@ SpeakingAssistant/
 ├── ⚙️ config.py              # Configuration management
 ├── 🤚 gestures.py          # macOS gesture controls
 ├── 🖥️ openApp.py           # Application lifecycle management
-├── 📱 phone-call.py        # Twilio SMS/call integration
-├── 📷 instagram.py         # Social media automation
 ├── 📄 requirements.txt       # Complete dependency list
-├── 📄 requirements-minimal.txt # Essential dependencies only
 ├── 📁 voice_assistant.log  # Application logs
 └── 📄 README.md           # This documentation
 ```
@@ -275,8 +272,6 @@ SpeakingAssistant/
 | **contacts.py** | Contact database | Name lookup, contact CRUD operations |
 | **openApp.py** | App control | Launch/terminate, app discovery |
 | **gestures.py** | System gestures | macOS workspace navigation |
-| **phone-call.py** | Telecommunications | SMS via Twilio, notification system |
-| **instagram.py** | Social media | Instagram bot automation |
 ```
 
 ## 🔧 Technical Architecture
@@ -385,18 +380,6 @@ The assistant creates detailed logs in `voice_assistant.log` including:
 - Error occurrences
 - System operations
 - Performance metrics
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is open source. Please check the license file for details.
 
 ## 🔮 Future Enhancements
 
