@@ -2,7 +2,6 @@
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![macOS](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](https://www.apple.com/macos/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Voice Assistant](https://img.shields.io/badge/type-Voice%20Assistant-purple.svg)]()
 
 A sophisticated, multi-functional voice-activated desktop assistant built in Python that can perform diverse tasks through natural language voice commands. Named "Rishi," this assistant integrates advanced speech recognition, system control, communication features, and smart automation capabilities.
