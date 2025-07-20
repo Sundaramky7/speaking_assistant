@@ -51,13 +51,6 @@ A sophisticated, multi-functional voice-activated desktop assistant built in Pyt
 - **WiFi Management**: Network scanning and connection info
 - **Process Management**: Advanced app lifecycle control with psutil
 
-### 📱 Communication & Social Media
-
-- **SMS Integration**: Twilio-powered text messaging
-- **Instagram Automation**: Bot integration for social media tasks
-- **Contact Sync**: Unified contact management across platforms
-- **Notification System**: Real-time communication alerts
-
 ### 🤚 Gesture & Input Control
 
 - **macOS Gestures**: System-level gesture recognition
