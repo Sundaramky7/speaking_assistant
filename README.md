@@ -20,6 +20,7 @@ A sophisticated, multi-functional voice-activated desktop assistant built in Pyt
 ## 🌟 Complete Feature Set
 
 ### 🔊 Advanced Voice Interaction
+
 - **Speech-to-Text**: Google Speech Recognition with EN-US and EN-IN fallbacks
 - **Text-to-Speech**: Customizable pyttsx3 engine with "Rishi" voice
 - **Smart Recognition**: Automatic noise calibration and ambient adjustment
@@ -27,6 +28,7 @@ A sophisticated, multi-functional voice-activated desktop assistant built in Pyt
 - **Multi-Modal Input**: Quick commands vs. extended listening modes
 
 ### 🌐 Web Automation & Search
+
 - **Smart Web Browsing**: Chrome/Brave browser integration
 - **Intelligent Search**: Google, YouTube, Wikipedia with voice summaries
 - **Website Shortcuts**: Direct access to YouTube, Google, Stack Overflow
@@ -34,6 +36,7 @@ A sophisticated, multi-functional voice-activated desktop assistant built in Pyt
 - **URL Processing**: Safe browser handling with error recovery
 
 ### 📧 Comprehensive Email System
+
 - **Voice-to-Email**: Natural language email composition
 - **Smart Contact Management**: Name-based contact lookup with partial matching
 - **Secure SMTP**: SSL/TLS encrypted email sending
@@ -41,6 +44,7 @@ A sophisticated, multi-functional voice-activated desktop assistant built in Pyt
 - **Contact Directory**: Comprehensive contact database with easy management
 
 ### 💻 System Control & Automation
+
 - **Application Management**: Open, close, show, and list installed apps
 - **Power Control**: System shutdown and restart commands
 - **Bluetooth Control**: Toggle, list devices, system profile access
@@ -48,17 +52,20 @@ A sophisticated, multi-functional voice-activated desktop assistant built in Pyt
 - **Process Management**: Advanced app lifecycle control with psutil
 
 ### 📱 Communication & Social Media
+
 - **SMS Integration**: Twilio-powered text messaging
 - **Instagram Automation**: Bot integration for social media tasks
 - **Contact Sync**: Unified contact management across platforms
 - **Notification System**: Real-time communication alerts
 
 ### 🤚 Gesture & Input Control
+
 - **macOS Gestures**: System-level gesture recognition
 - **Window Management**: Swipe controls for desktop navigation
 - **AppleScript Integration**: Native macOS automation support
 
 ### 🔍 Information & Research
+
 - **Wikipedia Integration**: Voice-activated research with audio summaries
 - **Real-time Search**: Intelligent query processing and results
 - **Knowledge Base**: Extensible information retrieval system
@@ -83,9 +90,6 @@ cd SpeakingAssistant
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Install minimal dependencies (alternative)
-pip install -r requirements-minimal.txt
-
 # Install macOS system utilities
 brew install blueutil portaudio
 ```
@@ -93,6 +97,7 @@ brew install blueutil portaudio
 ### Dependencies Overview
 
 **Core Dependencies:**
+
 ```txt
 pyttsx3>=2.90              # Text-to-speech engine
 SpeechRecognition>=3.10.0   # Speech recognition
@@ -102,13 +107,8 @@ psutil>=5.9.0               # System process management
 python-dotenv>=1.0.0        # Environment management
 ```
 
-**Communication:**
-```txt
-twilio>=8.2.0               # SMS/Phone functionality
-instabot>=0.117.0           # Instagram automation
-```
-
 **Audio Processing:**
+
 ```txt
 pyaudio>=0.2.11             # Microphone access
 ```
@@ -130,13 +130,6 @@ SMTP_PORT=587
 SPEECH_RATE=160
 VOICE_NAME=Rishi
 
-# API Keys (Optional)
-WOLFRAM_API_KEY=your_wolfram_key
-WEATHER_API_KEY=your_weather_key
-
-# Twilio Configuration (Optional)
-TWILIO_ACCOUNT_SID=your_account_sid
-TWILIO_AUTH_TOKEN=your_auth_token
 ```
 
 ### Email Setup (Gmail)
@@ -155,6 +148,7 @@ self.contacts = {
     # Add more contacts here
 }
 ```
+
 ## 🚀 Usage & Voice Commands
 
 ### Starting the Assistant
@@ -170,23 +164,26 @@ python -u SpeakAssistant.py 2>&1 | tee assistant_session.log
 ### Complete Voice Command Reference
 
 #### 🌐 Web Browsing & Search
-| Command | Description | Example |
-|---------|-------------|--------|
-| "Open YouTube" | Launch YouTube website | Direct browser opening |
-| "Open Google" | Launch Google homepage | Direct browser opening |
-| "Open Stack Overflow" | Developer Q&A platform | Direct browser opening |
-| "Search [query]" | Google web search | "Search Python tutorials" |
-| "Search Google [query]" | Explicit Google search | "Search Google machine learning" |
-| "Search YouTube [query]" | YouTube video search | "Search YouTube cooking recipes" |
-| "Wikipedia [topic]" | Research with audio summary | "Wikipedia artificial intelligence" |
+
+| Command                  | Description                 | Example                             |
+| ------------------------ | --------------------------- | ----------------------------------- |
+| "Open YouTube"           | Launch YouTube website      | Direct browser opening              |
+| "Open Google"            | Launch Google homepage      | Direct browser opening              |
+| "Open Stack Overflow"    | Developer Q&A platform      | Direct browser opening              |
+| "Search [query]"         | Google web search           | "Search Python tutorials"           |
+| "Search Google [query]"  | Explicit Google search      | "Search Google machine learning"    |
+| "Search YouTube [query]" | YouTube video search        | "Search YouTube cooking recipes"    |
+| "Wikipedia [topic]"      | Research with audio summary | "Wikipedia artificial intelligence" |
 
 #### 📧 Email & Communication
-| Command | Description | Process |
-|---------|-------------|--------|
-| "Send email" | Voice-to-email workflow | Name recipient → Dictate content → Send |
-| "List contacts" | Show contact directory | Displays all available contacts |
+
+| Command         | Description             | Process                                 |
+| --------------- | ----------------------- | --------------------------------------- |
+| "Send email"    | Voice-to-email workflow | Name recipient → Dictate content → Send |
+| "List contacts" | Show contact directory  | Displays all available contacts         |
 
 **Email Workflow Example:**
+
 1. Say: "Send email"
 2. Assistant: "Name the Receiver"
 3. You: "Sundaram" (or any contact name)
@@ -195,59 +192,68 @@ python -u SpeakAssistant.py 2>&1 | tee assistant_session.log
 6. Email sent automatically!
 
 #### 🎵 Media & Entertainment
-| Command | Description | Action |
-|---------|-------------|--------|
+
+| Command      | Description          | Action                      |
+| ------------ | -------------------- | --------------------------- |
 | "Play music" | Open music streaming | Launches Spotify web player |
-| "Play song" | Music playback | Contextual music commands |
+| "Play song"  | Music playback       | Contextual music commands   |
 
 #### 💻 System Control
-| Command | Description | System Action |
-|---------|-------------|--------|
-| "Shutdown" | Power down system | Initiates system shutdown |
-| "Restart" | Reboot system | Initiates system restart |
-| "Bluetooth on" | Enable Bluetooth | macOS Bluetooth activation |
-| "Bluetooth off" | Disable Bluetooth | macOS Bluetooth deactivation |
-| "Bluetooth show/list" | List BT devices | System Bluetooth profile |
-| "Scan WiFi" | Network scanning | Available WiFi networks |
+
+| Command               | Description       | System Action                |
+| --------------------- | ----------------- | ---------------------------- |
+| "Shutdown"            | Power down system | Initiates system shutdown    |
+| "Restart"             | Reboot system     | Initiates system restart     |
+| "Bluetooth on"        | Enable Bluetooth  | macOS Bluetooth activation   |
+| "Bluetooth off"       | Disable Bluetooth | macOS Bluetooth deactivation |
+| "Bluetooth show/list" | List BT devices   | System Bluetooth profile     |
+| "Scan WiFi"           | Network scanning  | Available WiFi networks      |
 
 #### 🖥️ Application Management
-| Command Pattern | Description | Examples |
-|-----------------|-------------|----------|
-| "Open [app]" | Launch application | "Open Terminal", "Open Safari" |
-| "Close [app]" | Terminate application | "Close Terminal", "Close Chrome" |
-| "Show apps" | List installed apps | Displays all available applications |
+
+| Command Pattern | Description           | Examples                            |
+| --------------- | --------------------- | ----------------------------------- |
+| "Open [app]"    | Launch application    | "Open Terminal", "Open Safari"      |
+| "Close [app]"   | Terminate application | "Close Terminal", "Close Chrome"    |
+| "Show apps"     | List installed apps   | Displays all available applications |
 
 **Supported Applications:**
+
 - System apps: Terminal, Safari, Mail, Calendar, Notes
 - Third-party apps: Chrome, Brave, WhatsApp, Telegram
 - Developer tools: Xcode, VS Code, etc.
 
 #### 🤚 Gesture Controls
-| Command | Description | macOS Action |
-|---------|-------------|--------|
-| "Swipe left" | Navigate left | Mission Control left workspace |
+
+| Command       | Description    | macOS Action                    |
+| ------------- | -------------- | ------------------------------- |
+| "Swipe left"  | Navigate left  | Mission Control left workspace  |
 | "Swipe right" | Navigate right | Mission Control right workspace |
 
 #### 🤖 Assistant Identity
-| Command | Response |
-|---------|----------|
+
+| Command             | Response                        |
+| ------------------- | ------------------------------- |
 | "What's your name?" | "I am Rishi, a voice assistant" |
-| "Who are you?" | Detailed capability description |
+| "Who are you?"      | Detailed capability description |
 
 ### Advanced Features
 
 #### 🔄 Multi-Attempt Recognition
+
 - **Smart Retry**: Automatically retries failed speech recognition
 - **Fallback Languages**: EN-US primary, EN-IN secondary
 - **Timeout Handling**: Different timeouts for quick vs. extended commands
 - **Confidence Validation**: Ensures recognition accuracy
 
 #### 🎯 Context-Aware Processing
+
 - **Command Parsing**: Intelligent keyword matching with priority ordering
 - **Partial Matching**: Flexible command interpretation
 - **Error Recovery**: Graceful handling of unrecognized commands
 
 ## 📁 Project Architecture
+
 ```
 SpeakingAssistant/
 ├── 🎤 SpeakAssistant.py      # Main application & command processing
@@ -263,15 +269,16 @@ SpeakingAssistant/
 
 ### Module Responsibilities
 
-| Module | Primary Function | Key Features |
-|--------|------------------|-------------|
-| **SpeakAssistant.py** | Core engine | Speech I/O, command routing, main loop |
-| **config.py** | Settings management | Environment variables, secure config |
-| **email_handler.py** | Email operations | SMTP, SSL/TLS, Gmail integration |
-| **contacts.py** | Contact database | Name lookup, contact CRUD operations |
-| **openApp.py** | App control | Launch/terminate, app discovery |
-| **gestures.py** | System gestures | macOS workspace navigation |
-```
+| Module                | Primary Function    | Key Features                           |
+| --------------------- | ------------------- | -------------------------------------- |
+| **SpeakAssistant.py** | Core engine         | Speech I/O, command routing, main loop |
+| **config.py**         | Settings management | Environment variables, secure config   |
+| **email_handler.py**  | Email operations    | SMTP, SSL/TLS, Gmail integration       |
+| **contacts.py**       | Contact database    | Name lookup, contact CRUD operations   |
+| **openApp.py**        | App control         | Launch/terminate, app discovery        |
+| **gestures.py**       | System gestures     | macOS workspace navigation             |
+
+````
 
 ## 🔧 Technical Architecture
 
@@ -296,31 +303,32 @@ graph TD
     G -->|Yes| H[Fallback Handler]
     E --> I[Action Execution]
     I --> J[Voice Response]
-```
+````
 
 ### Command Processing System
 
 1. **Speech Capture**: Microphone → Audio buffer → Noise filtering
-2. **Recognition**: Google Speech API → Language fallbacks → Confidence validation  
+2. **Recognition**: Google Speech API → Language fallbacks → Confidence validation
 3. **Parsing**: Keyword matching → Priority sorting → Handler selection
 4. **Execution**: Module dispatch → Error handling → Response generation
 5. **Feedback**: TTS synthesis → Audio output → Visual logging
 
 ### Key Technical Components
 
-| Component | Technology | Purpose | Features |
-|-----------|------------|---------|----------|
-| **Speech Engine** | Google Speech API | Voice recognition | Multi-language, cloud-based |
-| **TTS Engine** | pyttsx3 | Voice synthesis | Offline, customizable voices |
-| **Config Manager** | python-dotenv | Settings | Secure env var handling |
-| **Email System** | smtplib + SSL | Communication | Encrypted SMTP, Gmail integration |
-| **Process Control** | psutil | System management | Cross-platform process handling |
-| **Web Automation** | webbrowser + urllib | Browser control | Safe URL handling |
-| **Gesture Control** | AppleScript | macOS integration | System-level automation |
+| Component           | Technology          | Purpose           | Features                          |
+| ------------------- | ------------------- | ----------------- | --------------------------------- |
+| **Speech Engine**   | Google Speech API   | Voice recognition | Multi-language, cloud-based       |
+| **TTS Engine**      | pyttsx3             | Voice synthesis   | Offline, customizable voices      |
+| **Config Manager**  | python-dotenv       | Settings          | Secure env var handling           |
+| **Email System**    | smtplib + SSL       | Communication     | Encrypted SMTP, Gmail integration |
+| **Process Control** | psutil              | System management | Cross-platform process handling   |
+| **Web Automation**  | webbrowser + urllib | Browser control   | Safe URL handling                 |
+| **Gesture Control** | AppleScript         | macOS integration | System-level automation           |
 
 ### Performance Optimizations
 
 #### Speech Recognition
+
 - **Energy Threshold**: 4000 (optimized for clarity)
 - **Dynamic Adjustment**: Auto-calibration for ambient noise
 - **Timeout Configuration**: 3s standard, 6s for extended input
@@ -328,6 +336,7 @@ graph TD
 - **Retry Strategy**: 2 attempts with exponential backoff
 
 #### Memory & Resource Management
+
 - **Singleton Patterns**: Global recognizer and handlers
 - **Lazy Loading**: Modules loaded on-demand
 - **Connection Pooling**: Reusable SMTP connections
@@ -336,6 +345,7 @@ graph TD
 ## 🎨 User Interface
 
 The assistant provides:
+
 - **Colorful Console Output**: Color-coded status messages
 - **Visual Feedback**: Real-time processing indicators
 - **Audio Feedback**: Voice confirmations and responses
@@ -353,21 +363,25 @@ The assistant provides:
 ### Common Issues
 
 **Microphone Not Working:**
+
 - Check microphone permissions in System Preferences
 - Ensure microphone is not muted
 - Run microphone calibration
 
 **Speech Recognition Errors:**
+
 - Check internet connection
 - Speak clearly and at moderate pace
 - Reduce background noise
 
 **Email Not Sending:**
+
 - Verify email configuration
 - Check internet connection
 - Ensure email credentials are correct
 
 **Browser Not Opening:**
+
 - Install Chrome or Brave browser
 - Check browser installation path
 - Verify browser permissions
@@ -375,6 +389,7 @@ The assistant provides:
 ## 📝 Logging
 
 The assistant creates detailed logs in `voice_assistant.log` including:
+
 - Command recognition events
 - Error occurrences
 - System operations
@@ -393,6 +408,7 @@ The assistant creates detailed logs in `voice_assistant.log` including:
 ## 📞 Support
 
 For issues, questions, or contributions:
+
 - Create an issue in the repository
 - Check the troubleshooting section
 - Review the logs for error details

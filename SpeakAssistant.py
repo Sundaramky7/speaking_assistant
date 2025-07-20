@@ -254,9 +254,6 @@ def setup_email_configuration():
         smtp_port_input = input(f"SMTP Port [587]: ").strip()
         smtp_port = smtp_port_input if smtp_port_input.isdigit() else "587"
         
-        # Remove all spaces from password before saving (not just leading/trailing)
-        password = password.replace(" ", "")
-        
         # Save configuration to .env file
         env_path = Path(__file__).parent / '.env'
         

@@ -161,7 +161,9 @@ class Config:
             print("For Gmail, use an App Password (not your regular password)")
             print("Generate one at: https://myaccount.google.com/apppasswords")
             
-            password = getpass.getpass("Enter your email password/app password: ").strip().replace(" ", "")
+            password = getpass.getpass("Enter your email password/app password: ").strip()
+            # Remove all spaces from password to avoid SMTP login issues
+            password = password.replace(" ", "")
             
             if not password:
                 print(colorama.Fore.RED + "❌ Password is required!" + colorama.Fore.WHITE)
