@@ -1,0 +1,108 @@
+# Speaking Assistant - Requirements File
+# Comprehensive dependencies for all project modules
+
+# ========================================
+# CORE VOICE ASSISTANT DEPENDENCIES
+# ========================================
+
+# Speech Recognition and Text-to-Speech
+pyttsx3>=2.90
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.11  # For microphone access
+
+# Wikipedia integration
+wikipedia>=1.4.0
+
+# Terminal colors and formatting
+colorama>=0.4.6
+
+# System process management (for app control)
+psutil>=5.9.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# ========================================
+# COMMUNICATION & MESSAGING
+# ========================================
+
+# Phone/SMS functionality (Twilio)
+twilio>=8.2.0
+
+# Instagram bot functionality
+instabot>=0.117.0
+
+# ========================================
+# WEB AUTOMATION & SCRAPING
+# ========================================
+
+# Web scraping and parsing
+beautifulsoup4>=4.11.0
+requests>=2.28.0
+
+# Browser automation (optional, currently commented out)
+# selenium>=4.15.0
+
+# ========================================
+# GESTURE & INPUT CONTROL
+# ========================================
+
+# Keyboard and mouse control
+# pynput>=1.7.6  # Currently commented out in gestures.py
+# pyautogui>=0.9.54  # Currently commented out in gestures.py
+# keyboard>=0.13.5  # Currently commented out in gestures.py
+
+# ========================================
+# OPTIONAL DEPENDENCIES
+# ========================================
+
+# Computer vision (if needed for future features)
+# opencv-python>=4.8.0
+
+# Wolfram Alpha integration (for advanced queries)
+# wolframalpha>=5.0.0
+
+# Camera capture (currently commented out)
+# ecapture>=0.1.0
+
+# Additional TTS engines
+# py3-tts>=3.0  # Alternative TTS library
+
+# Legacy/platform-specific libraries
+# bluetool>=0.2.3  # Linux Bluetooth control
+# python-lightblue>=0.4  # Cross-platform Bluetooth
+# pybluez>=0.23  # Python Bluetooth library
+
+# ========================================
+# DEVELOPMENT & TESTING (OPTIONAL)
+# ========================================
+
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# flake8>=6.0.0
+# black>=23.0.0
+
+# ========================================
+# SYSTEM REQUIREMENTS & NOTES
+# ========================================
+
+# macOS System Utilities (install via Homebrew):
+# brew install blueutil  # For Bluetooth control
+# brew install portaudio  # For audio processing
+
+# Environment Variables Required (.env file):
+# EMAIL_ADDRESS=your_email@gmail.com
+# EMAIL_PASSWORD=your_app_specific_password
+# SMTP_SERVER=smtp.gmail.com
+# SMTP_PORT=587
+# SPEECH_RATE=160
+# VOICE_NAME=Rishi
+# WOLFRAM_API_KEY=your_key  # (optional)
+# WEATHER_API_KEY=your_key  # (optional)
+
+# Notes:
+# - Some packages may require additional system dependencies
+# - For Gmail, use app-specific passwords instead of regular passwords
+# - macOS users need Xcode command line tools for some packages
+# - PyAudio installation may require portaudio system library
+

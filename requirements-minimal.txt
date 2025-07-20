@@ -1,0 +1,23 @@
+# Minimal Requirements - Only Essential Dependencies
+# Based on actual imports in the current codebase
+
+# Core Voice Assistant (required by SpeakAssistant.py)
+pyttsx3>=2.90
+SpeechRecognition>=3.10.0
+wikipedia>=1.4.0
+colorama>=0.4.6
+
+# System Management (required by openApp.py)
+psutil>=5.9.0
+
+# Configuration Management (required by config.py)
+python-dotenv>=1.0.0
+
+# Communication (required by phone-call.py)
+twilio>=8.2.0
+
+# Social Media (required by instagram.py)
+instabot>=0.117.0
+
+# Audio Processing (may be required for SpeechRecognition)
+pyaudio>=0.2.11
